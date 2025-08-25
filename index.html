@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yashasvi Shanker • Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Portfolio of Yashasvi Shanker — Computer Engineering student interested in AI, UI/UX, and management."
+    />
+  </head>
+  <body>
+    <!-- SVG Filter for Glass Distortion -->
+    <svg style="display: none">
+      <filter id="glass-distortion">
+        <feTurbulence type="turbulence" baseFrequency="0.008" numOctaves="2" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="77" />
+      </filter>
+    </svg>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <main class="grid-container">
+      <!-- About Me -->
+      <section
+        class="card about"
+        aria-labelledby="about-title"
+        style="--delay: 0ms"
+      >
+        <div class="card-content">
+          <h2 id="about-title" class="sr-only">About</h2>
+          <div class="about-hero">
+            <div class="about-overlay">
+              <h1 class="about-name">
+                Yashasvi <span class="accent">Shanker</span>
+              </h1>
+              <div class="about-quote">
+                "Building thoughtful systems with clean, futuristic interfaces."
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Quote -->
+      <section 
+        class="card" 
+        aria-label="Personal Introduction"
+        style="--delay: 30ms; grid-column: span 8;"
+      >
+        <div class="card-content">
+          <blockquote class="personal-quote">
+            <p>"Hi, I'm <em>Yashasvi Shanker</em>, a Computer Engineering student from Mumbai, India. I build impactful solutions by combining creativity with technology. I take on challenges, lead with curiosity, and create projects that make a difference."</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Socials -->
+      <section
+        class="card socials"
+        aria-labelledby="socials-title"
+        style="--delay: 600ms"
+      >
+        <div class="card-content">
+          <h2 id="socials-title" class="card-title">Socials</h2>
+          <div class="social-grid">
+            <a
+              class="social-item"
+              href="https://www.linkedin.com/in/yashasvi-shanker/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M19 3A2.94 2.94 0 0 1 22 6v12a2.94 2.94 0 0 1-3 3H5a2.94 2.94 0 0 1-3-3V6a2.94 2.94 0 0 1 3-3h14M8.33 17.67V9.5H5.67v8.17h2.66M7 8.33A1.5 1.5 0 1 0 7 5.33a1.5 1.5 0 0 0 0 3M18.33 17.67v-4.38c0-2.34-2.5-2.16-3.34-1.06v-1.39H12.33v6.83h2.66v-3.83c0-1.03 1.67-1.12 1.67 0v3.83h2.67Z"
+                />
+              </svg>
+              <span class="social-label">LinkedIn</span>
+            </a>
+            <a
+              class="social-item"
+              href="https://github.com/YashasviShanker"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.19-3.37-1.19-.46-1.17-1.12-1.49-1.12-1.49-.92-.62.07-.61.07-.61 1.02.07 1.55 1.05 1.55 1.05.9 1.54 2.36 1.09 2.93.83.09-.66.35-1.1.63-1.35-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.7.12 2.5.35 1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.1 2.65.64.7 1.02 1.59 1.02 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"
+                />
+              </svg>
+              <span class="social-label">GitHub</span>
+            </a>
+            <a
+              class="social-item"
+              href="https://www.instagram.com/yashasvi.31/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7m10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10m-5 3a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2.1A2.9 2.9 0 1 1 9.1 12A2.9 2.9 0 0 1 12 9.1m4.7-.95a.95.95 0 1 0 0 1.9a.95.95 0 0 0 0-1.9Z"
+                />
+              </svg>
+              <span class="social-label">Instagram</span>
+            </a>
+          </div>
+          <p class="muted">Connect with me on these platforms.</p>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section
+        class="card education"
+        aria-labelledby="education-title"
+        style="--delay: 60ms"
+      >
+        <div class="card-content">
+          <h2 id="education-title" class="card-title">Education</h2>
+          <ul class="timeline">
+            <li>
+              <div class="row-top">
+                <span class="when">2023 – 2026</span>
+                <span class="org">MPSTME, NMIMS University</span>
+              </div>
+              <div class="row-bottom">
+                B.Tech in Computer Engineering
+              </div>
+            </li>
+            <li>
+              <div class="row-top">
+                <span class="when">2020 – 2023</span>
+                <span class="org">MPSTME, NMIMS University</span>
+              </div>
+              <div class="row-bottom">
+                Diploma in Computer Engineering
+              </div>
+            </li>
+            <li>
+              <div class="row-top">
+                <span class="when">2020</span>
+                <span class="org">RBK School</span>
+              </div>
+              <div class="row-bottom">ICSE</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section
+        class="card projects"
+        aria-labelledby="projects-title"
+        style="--delay: 120ms"
+      >
+        <div class="card-content">
+          <h2 id="projects-title" class="card-title">Projects</h2>
+          <div class="logos-scroll-container">
+            <div class="logos-scroll">
+              <div class="logo-item" title="Canva">
+                <i class="fab fa-canadian-maple-leaf"></i>
+                <span>Canva</span>
+              </div>
+              <div class="logo-item" title="Adobe">
+                <i class="fab fa-adobe"></i>
+                <span>Adobe</span>
+              </div>
+              <div class="logo-item" title="Python">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="logo-item" title="Wireshark">
+                <i class="fas fa-network-wired"></i>
+                <span>Wireshark</span>
+              </div>
+              <div class="logo-item" title="Autopsy">
+                <i class="fas fa-search"></i>
+                <span>Autopsy</span>
+              </div>
+              <div class="logo-item" title="Visual Studio">
+                <i class="fab fa-microsoft"></i>
+                <span>VS Studio</span>
+              </div>
+              <div class="logo-item" title="Android Studio">
+                <i class="fab fa-android"></i>
+                <span>Android Studio</span>
+              </div>
+              <div class="logo-item" title="GitHub">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </div>
+              <div class="logo-item" title="MongoDB">
+                <i class="fas fa-database"></i>
+                <span>MongoDB</span>
+              </div>
+              <div class="logo-item" title="Figma">
+                <i class="fab fa-figma"></i>
+                <span>Figma</span>
+              </div>
+              <div class="logo-item" title="Hugging Face">
+                <i class="fas fa-robot"></i>
+                <span>Hugging Face</span>
+              </div>
+              <!-- Duplicate for seamless loop -->
+              <div class="logo-item" title="Canva">
+                <i class="fab fa-canadian-maple-leaf"></i>
+                <span>Canva</span>
+              </div>
+              <div class="logo-item" title="Android Studio">
+                <i class="fab fa-android"></i>
+                <span>Android Studio</span>
+              </div>
+              <div class="logo-item" title="Python">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="logo-item" title="Wireshark">
+                <i class="fas fa-network-wired"></i>
+                <span>Wireshark</span>
+              </div>
+              <div class="logo-item" title="Autopsy">
+                <i class="fas fa-search"></i>
+                <span>Autopsy</span>
+              </div>
+              <div class="logo-item" title="Visual Studio">
+                <i class="fab fa-microsoft"></i>
+                <span>VS Studio</span>
+              </div>
+              <div class="logo-item" title="VS Studio">
+                <i class="fas fa-code"></i>
+                <span>VS Studio</span>
+              </div>
+              <div class="logo-item" title="GitHub">
+                <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.416 22 12c0-5.523-4.477-10-10-10z" fill="currentColor"/>
+                </svg>
+                <span>GitHub</span>
+              </div>
+            </div>
+          </div>
+          <ul class="list projects-list">
+            <li><strong>Calma</strong> — UI/UX Project for HCI (2025)</li>
+            <li><strong>Exercise Counter</strong> — AI (2024)</li>
+            <li><strong>Fire Detection</strong> — AI (2024)</li>
+            <li><strong>Pictionary</strong> — Gesture Recognition (2024)</li>
+            <li><strong>Flappy Bird</strong> — Gesture Recognition (2024)</li>
+            <li><strong>Funded</strong> — Finance Website (2023)</li>
+          </ul>
+          <p class="muted">
+            A blend of user-centered design, AI prototypes, and playful
+            gesture-based experiments.
+          </p>
+        </div>
+      </section>
+
+      <!-- Internships -->
+      <section
+        class="card internships"
+        aria-labelledby="internships-title"
+        style="--delay: 180ms"
+      >
+        <div class="card-content">
+          <h2 id="internships-title" class="card-title">Internships</h2>
+          <ul class="list">
+            <li>
+              <div class="item-head">
+                <span class="org">The Boredom Shack</span>
+                <span class="when">30th Jun – 7th Aug 2020</span>
+              </div>
+              <p class="item-sub">Marketing</p>
+              <p class="item-desc">
+                Developed strategies and content ideas for influencer campaigns.
+              </p>
+            </li>
+            <li>
+              <div class="item-head">
+                <span class="org">Younity.in</span>
+                <span class="when">7th May – 7th Jun 2021</span>
+              </div>
+              <p class="item-sub">Business Development & Research</p>
+              <p class="item-desc">
+                Identified potential teachers and courses to grow the platform.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Skills (Technical) -->
+      <section
+        class="card skills-tech"
+        aria-labelledby="skills-tech-title"
+        style="--delay: 240ms"
+      >
+        <div class="card-content">
+          <h2 id="skills-tech-title" class="card-title">Skills — Technical</h2>
+          <ul class="tags">
+            <li>Python</li>
+            <li>C++</li>
+            <li>Wireshark</li>
+            <li>Autopsy</li>
+            <li>React.js</li>
+            <li>UI/UX</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>Figma</li>
+            <li>Canva</li>
+            <li>Lean Six Sigma</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Skills (Soft) -->
+      <section
+        class="card skills-soft"
+        aria-labelledby="skills-soft-title"
+        style="--delay: 300ms"
+      >
+        <div class="card-content">
+          <h2 id="skills-soft-title" class="card-title">Skills — Soft</h2>
+          <ul class="tags">
+            <li>Leadership</li>
+            <li>Team Management</li>
+            <li>Data-driven decision-making</li>
+            <li>Adaptability & Quick Learning</li>
+            <li>Strategic Planning</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section
+        class="card certifications"
+        aria-labelledby="certifications-title"
+        style="--delay: 360ms"
+      >
+        <div class="card-content">
+          <h2 id="certifications-title" class="card-title">Certifications</h2>
+          <ul class="list compact">
+            <li>Cyber Threat Management (Cisco Networking Academy)</li>
+            <li>Cybersecurity Essentials (Secure Claw)</li>
+            <li>Lean Six Sigma Black Belt (Udemy)</li>
+            <li>Personality and Soft Skills Building (Younity.in)</li>
+            <li>Python Programming (Younity.in)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Achievements & POR -->
+      <section
+        class="card achievements"
+        aria-labelledby="achievements-title"
+        style="--delay: 420ms"
+      >
+        <div class="card-content">
+          <h2 id="achievements-title" class="card-title">
+            Achievements & Positions
+          </h2>
+          <ul class="list two-col">
+            <li>Chairperson, IEEE RAS (2025–26)</li>
+            <li>Secretary, IEEE RAS (2024–25)</li>
+            <li>Sub-Head, Content & Design, IEEE RAS (2024–25)</li>
+            <li>Executive, Social Media & Creatives, IET (2023–24)</li>
+            <li>Delegate, Model United Nations (MUN)</li>
+            <li>
+              Volunteer Intern, RCBA – Rotaract Club of Bombay Airport
+              (2022–2024)
+            </li>
+            <li>Volunteer Intern, AMTM – Animal Matter to Me (2023)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section
+        class="card contact"
+        aria-labelledby="contact-title"
+        style="--delay: 480ms"
+      >
+        <div class="card-content">
+          <h2 id="contact-title" class="card-title">Contact</h2>
+          <div class="contact-grid">
+            <a class="contact-item" href="tel:9029408991" aria-label="Phone">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">9029408991</span>
+            </a>
+            <a
+              class="contact-item"
+              href="mailto:yashfive@gmail.com"
+              aria-label="Email"
+            >
+              <span class="contact-label">Email</span>
+              <span class="contact-value">yashfive@gmail.com</span>
+            </a>
+            <div class="contact-item" aria-label="Location">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Mumbai, India</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hobbies -->
+      <section
+        class="card hobbies"
+        aria-labelledby="hobbies-title"
+        style="--delay: 540ms"
+      >
+        <div class="card-content">
+          <h2 id="hobbies-title" class="card-title">Hobbies</h2>
+          <ul class="list hobbies-list">
+            <li>
+              <div class="hobby-head">
+                <span class="hobby-icon" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="7"
+                      cy="17"
+                      r="3"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <circle
+                      cx="17"
+                      cy="17"
+                      r="3"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <path
+                      d="M9 17h5.4c1.05 0 1.92-.5 2.4-1.35l1.6-2.65H21"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.2 12.1l2.2-2.2c.45-.45 1.06-.7 1.7-.7H16.5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M10.8 12.6l-1.2-2.3"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M13.2 13.4l-1.2 1.8"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <strong>Bike rides</strong>
+              </div>
+              <p class="muted">
+                Taught me resilience, discipline, and a love for exploration.
+              </p>
+            </li>
+            <li>
+              <div class="hobby-head">
+                <span class="hobby-icon" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="8"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                    />
+                    <polygon
+                      points="12,8.2 14.2,9.7 13.5,12.1 10.5,12.1 9.8,9.7"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
+                    <path
+                      d="M9.8 9.7L8.2 8.6M14.2 9.7l1.6-1.1M10.5 12.1l-1.4 1.7M13.5 12.1l1.4 1.7M12 8.2V6.5"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      opacity="0.8"
+                    />
+                    <path
+                      d="M7.2 12.5c.5 1.4 1.6 2.4 3 2.8M16.8 12.5c-.5 1.4-1.6 2.4-3 2.8"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      opacity="0.8"
+                    />
+                  </svg>
+                </span>
+                <strong>Football</strong>
+              </div>
+              <p class="muted">
+                Built teamwork, strategy, and leadership under pressure.
+              </p>
+            </li>
+            <li>
+              <div class="hobby-head">
+                <span class="hobby-icon" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 5h9a3 3 0 0 1 3 3v10H8a3 3 0 0 1-3-3V5z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17 8h2a2 2 0 0 1 2 2v8h-4V8z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 8h6"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <strong>Reading</strong>
+              </div>
+              <p class="muted">
+                Sharpened curiosity, critical thinking, and communication.
+              </p>
+            </li>
+            <li>
+              <div class="hobby-head">
+                <span class="hobby-icon" aria-hidden="true">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5v10.5a2.5 2.5 0 1 1-2-2.44"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M15 4v9.5a2.5 2.5 0 1 1-2-2.44"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <strong>Music</strong>
+              </div>
+              <p class="muted">
+                Nurtured creativity, focus, and emotional intelligence.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Vinyl Player -->
+      <section class="card vinyl-player" style="--delay: 1200ms">
+        <div class="card-content">
+          <h2 class="card-title">Now Playing</h2>
+          <div class="vinyl-container">
+            <div class="vinyl">
+              <div class="vinyl-label">
+                <span>Greenback Boogie</span>
+                <span class="artist">Ima Robot</span>
+              </div>
+            </div>
+          </div>
+          <div class="player-controls">
+            <button class="control-btn" id="prev-btn" aria-label="Previous">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 19 2 12 11 5 11 19"></polygon>
+                <polygon points="22 19 13 12 22 5 22 19"></polygon>
+              </svg>
+            </button>
+            <button class="control-btn" id="play-btn" aria-label="Play">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </button>
+            <button class="control-btn" id="next-btn" aria-label="Next">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 19 22 12 13 5 13 19"></polygon>
+                <polygon points="2 19 11 12 2 5 2 19"></polygon>
+              </svg>
+            </button>
+            <button class="control-btn" id="mute-btn" aria-label="Mute">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="track-info">
+            <h4>Lofi Study Beat</h4>
+            <p>Chillhop</p>
+          </div>
+          <audio id="audio-player" loop></audio>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="lofi-player.js"></script>
+  </body>
+</html>
