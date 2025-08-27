@@ -67,33 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       }
 
-      // Update vinyl label SVG curved text
+      // Clear vinyl label (no text)
       if (vinylLabel) {
-        vinylLabel.innerHTML = `
-          <svg viewBox="0 0 100 100" width="100%" height="100%">
-            <defs>
-              <path id="labelArc" d="M 20 55 A 30 30 0 0 1 80 55" />
-            </defs>
-            <text font-size="8" fill="#222" font-family="Oswald, Arial Narrow, Arial, sans-serif">
-              <textPath xlink:href="#labelArc" startOffset="0">${track.title}</textPath>
-            </text>
-          </svg>
-        `;
-        // Show artist below vinyl
-        const vinylContainer = document.querySelector(".vinyl-container");
-        if (vinylContainer) {
-          let artistLabel = vinylContainer.querySelector(".vinyl-artist-label");
-          if (!artistLabel) {
-            artistLabel = document.createElement("div");
-            artistLabel.className = "vinyl-artist-label";
-            artistLabel.style.textAlign = "center";
-            artistLabel.style.marginTop = "8px";
-            artistLabel.style.fontSize = "1rem";
-            artistLabel.style.color = "#555";
-            vinylContainer.appendChild(artistLabel);
-          }
-          artistLabel.textContent = track.artist;
-        }
+        vinylLabel.innerHTML = "";
       }
     } else {
       console.error("Current track not found");
@@ -171,54 +147,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTrack(newTrack);
     audioPlayer.currentTime = 0;
-
-    if (wasPlaying) {
-      const playPromise = audioPlayer.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            if (vinyl) vinyl.classList.add("playing");
-          })
-          .catch((error) => {
-            console.error("Error playing track:", error);
-            isPlaying = false;
-            updatePlayButton();
-          });
-      } else {
-        if (vinyl) vinyl.classList.add("playing");
-      }
-    }
-    isPlaying = wasPlaying;
-    updatePlayButton();
-  }
-
-  // Update play button icon
-  function updatePlayButton() {
-    const playIcon = playBtn.querySelector("svg");
-    if (isPlaying) {
-      // Change to pause icon
-      playIcon.innerHTML =
-        '<polygon points="6 4 10 4 10 20 6 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polygon points="14 4 18 4 18 20 14 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
-    } else {
-      // Change to play icon
-      playIcon.innerHTML =
-        '<polygon points="5 3 19 12 5 21 5 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+    // Clear vinyl label (no text)
+    const vinylLabel = document.querySelector(".vinyl-label");
+    if (vinylLabel) {
+      vinylLabel.innerHTML = "";
     }
   }
 
-  // Update mute button icon
-  function updateMuteButton() {
-    const muteIcon = muteBtn.querySelector("svg");
-    if (audioPlayer.muted) {
-      // Show muted icon
-      muteIcon.innerHTML =
-        '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
-    } else {
-      // Show unmuted icon
-      muteIcon.innerHTML =
-        '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
-    }
-  }
+  // (Removed duplicate updateMuteButton function)
 
   // Event listeners
   playBtn.addEventListener("click", togglePlay);
