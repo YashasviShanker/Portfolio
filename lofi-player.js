@@ -72,12 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
         vinylLabel.innerHTML = `
           <svg viewBox="0 0 100 100" width="100%" height="100%">
             <defs>
-              <path id="labelArc" d="M 15 50 A 35 35 0 0 1 85 50" />
+              <path id="labelArc" d="M 10 50 A 40 40 0 0 1 90 50" />
             </defs>
-            <text font-size="24" fill="#222" font-family="Montserrat, Poppins, sans-serif">
+            <text font-size="14" fill="#222" font-family="Montserrat, Poppins, sans-serif">
               <textPath xlink:href="#labelArc" startOffset="0">${track.title}</textPath>
             </text>
-            <text font-size="20" fill="#555" font-family="Montserrat, Poppins, sans-serif">
+            <text font-size="12" fill="#555" font-family="Montserrat, Poppins, sans-serif">
               <textPath xlink:href="#labelArc" startOffset="60%">${track.artist}</textPath>
             </text>
           </svg>
