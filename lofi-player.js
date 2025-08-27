@@ -67,23 +67,20 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       }
 
-      // Update vinyl label
+      // Update vinyl label SVG curved text
       if (vinylLabel) {
-        // Split long titles into two lines if needed
-        const titleParts = track.title.split(" ");
-        const firstHalf = titleParts
-          .slice(0, Math.ceil(titleParts.length / 2))
-          .join(" ");
-        const secondHalf = titleParts
-          .slice(Math.ceil(titleParts.length / 2))
-          .join(" ");
-
         vinylLabel.innerHTML = `
-          <div class="label-text">
-            <div class="label-title">${firstHalf}</div>
-            ${secondHalf ? `<div class="label-title">${secondHalf}</div>` : ""}
-            <div class="label-artist">${track.artist}</div>
-          </div>
+          <svg viewBox="0 0 100 100" width="100%" height="100%">
+            <defs>
+              <path id="labelArc" d="M 15 50 A 35 35 0 0 1 85 50" />
+            </defs>
+            <text font-size="7" fill="#222">
+              <textPath xlink:href="#labelArc" startOffset="0">${track.title}</textPath>
+            </text>
+            <text font-size="6" fill="#555">
+              <textPath xlink:href="#labelArc" startOffset="60%">${track.artist}</textPath>
+            </text>
+          </svg>
         `;
       }
     } else {
