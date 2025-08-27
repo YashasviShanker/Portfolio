@@ -72,16 +72,28 @@ document.addEventListener("DOMContentLoaded", function () {
         vinylLabel.innerHTML = `
           <svg viewBox="0 0 100 100" width="100%" height="100%">
             <defs>
-              <path id="labelArc" d="M 10 50 A 40 40 0 0 1 90 50" />
+              <path id="labelArc" d="M 20 55 A 30 30 0 0 1 80 55" />
             </defs>
-            <text font-size="12" fill="#222" font-family="Oswald, Arial Narrow, Arial, sans-serif">
+            <text font-size="8" fill="#222" font-family="Oswald, Arial Narrow, Arial, sans-serif">
               <textPath xlink:href="#labelArc" startOffset="0">${track.title}</textPath>
-            </text>
-            <text font-size="10" fill="#555" font-family="Oswald, Arial Narrow, Arial, sans-serif">
-              <textPath xlink:href="#labelArc" startOffset="60%">${track.artist}</textPath>
             </text>
           </svg>
         `;
+        // Show artist below vinyl
+        const vinylContainer = document.querySelector(".vinyl-container");
+        if (vinylContainer) {
+          let artistLabel = vinylContainer.querySelector(".vinyl-artist-label");
+          if (!artistLabel) {
+            artistLabel = document.createElement("div");
+            artistLabel.className = "vinyl-artist-label";
+            artistLabel.style.textAlign = "center";
+            artistLabel.style.marginTop = "8px";
+            artistLabel.style.fontSize = "1rem";
+            artistLabel.style.color = "#555";
+            vinylContainer.appendChild(artistLabel);
+          }
+          artistLabel.textContent = track.artist;
+        }
       }
     } else {
       console.error("Current track not found");
