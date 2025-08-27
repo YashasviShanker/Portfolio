@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <defs>
               <path id="labelArc" d="M 10 50 A 40 40 0 0 1 90 50" />
             </defs>
-            <text font-size="14" fill="#222" font-family="Montserrat, Poppins, sans-serif">
+            <text font-size="12" fill="#222" font-family="Oswald, Arial Narrow, Arial, sans-serif">
               <textPath xlink:href="#labelArc" startOffset="0">${track.title}</textPath>
             </text>
-            <text font-size="12" fill="#555" font-family="Montserrat, Poppins, sans-serif">
+            <text font-size="10" fill="#555" font-family="Oswald, Arial Narrow, Arial, sans-serif">
               <textPath xlink:href="#labelArc" startOffset="60%">${track.artist}</textPath>
             </text>
           </svg>
