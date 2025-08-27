@@ -152,6 +152,27 @@ document.addEventListener("DOMContentLoaded", function () {
     if (vinylLabel) {
       vinylLabel.innerHTML = "";
     }
+
+    // Auto-play next track if previous was playing
+    if (wasPlaying) {
+      const playPromise = audioPlayer.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            if (vinyl) vinyl.classList.add("playing");
+          })
+          .catch((error) => {
+            console.error("Error playing audio:", error);
+          });
+      } else {
+        if (vinyl) vinyl.classList.add("playing");
+      }
+      isPlaying = true;
+      updatePlayButton();
+    } else {
+      isPlaying = false;
+      updatePlayButton();
+    }
   }
 
   // (Removed duplicate updateMuteButton function)
