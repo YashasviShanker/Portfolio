@@ -1,11 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Single track configuration
-  const track = {
-    title: "Lofi Study",
-    artist: "Chillhop",
-    src: "Music/Lofi.mp3", // Local file
-  };
-  const tracks = [track];
+  // Multiple tracks configuration
+  const tracks = [
+    {
+      title: "Midnight Chill",
+      artist: "DJ Aurora",
+      src: "Music/Lofi.mp3",
+    },
+    {
+      title: "Sunset Groove",
+      artist: "BeatSmith",
+      src: "Music/lofi-2.mp3",
+    },
+    {
+      title: "Dreamscape",
+      artist: "Echoes",
+      src: "Music/lofi-3.mp3",
+    },
+  ];
 
   const vinyl = document.querySelector(".vinyl");
   const vinylContainer = document.querySelector(".vinyl-player");
@@ -19,9 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let isPlaying = false;
 
   // Set audio element src and properties
-  audioPlayer.src = track.src;
-  audioPlayer.volume = 0.3;
-  audioPlayer.loop = true;
+  function setTrack(idx) {
+    currentTrack = idx;
+    audioPlayer.src = tracks[currentTrack].src;
+    audioPlayer.volume = 0.3;
+    audioPlayer.loop = true;
+    updateTrackInfo();
+  }
+  setTrack(currentTrack);
 
   // Error handling for audio loading
   audioPlayer.addEventListener("error", function () {
@@ -134,18 +150,18 @@ document.addEventListener("DOMContentLoaded", function () {
     updateMuteButton();
   }
 
-  // Change track (kept for compatibility but will loop the same track)
-  function changeTrack() {
-    // Restart the same track
+  // Change track (next/prev)
+  function changeTrack(direction) {
+    let newTrack = currentTrack + direction;
+    if (newTrack < 0) newTrack = tracks.length - 1;
+    if (newTrack >= tracks.length) newTrack = 0;
     const wasPlaying = isPlaying;
 
-    if (wasPlaying) {
-      audioPlayer.pause();
-      if (vinyl) vinyl.classList.remove("playing");
-    }
+    audioPlayer.pause();
+    if (vinyl) vinyl.classList.remove("playing");
 
+    setTrack(newTrack);
     audioPlayer.currentTime = 0;
-    updateTrackInfo();
 
     if (wasPlaying) {
       const playPromise = audioPlayer.play();
@@ -163,6 +179,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (vinyl) vinyl.classList.add("playing");
       }
     }
+    isPlaying = wasPlaying;
+    updatePlayButton();
   }
 
   // Update play button icon
